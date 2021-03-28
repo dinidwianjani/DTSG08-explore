@@ -1,3 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: block;
+}
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+}
+
 body{
     font-family: "Futura Lt BT";
 }
@@ -11,7 +46,6 @@ body{
 
 .body1-wrapper {
     text-align: center;
-    height: 600px;
     background-color: #fff;
     padding: 0 5% 80px 5%;
     color: #2c5311;
@@ -20,17 +54,19 @@ body{
 .heading {
     padding-top: 80px;
     padding-bottom: 50px;
-}
+ }
 
 .heading h2 {
     font-weight: bold;
     font-family: "Futura Hv BT";
     font-size: 50px;
+    animation: slide_up 1.5s ease;
 }
 
-.heading p {
-    font-size: 40px;
-    line-height: 13px;
+.heading h3 {
+    font-size: 30px;
+    line-height: 23px;
+    animation: slide_up 2s ease;
 }
 
 .menu {
@@ -40,32 +76,22 @@ body{
 
 .menu-icon img{
     height: 180px;
+    animation: slide_up 3s ease;
 }
 
 .text-contents {
     display: inline-block;
     margin-top: 15px;
     font-weight: bold;
-    font-size: 25px
+    font-size: 25px;
+    animation: slide_up 3s ease;
 }
 
-.kontak {
-    text-align: center;
-    background-color: #a2d39c;
-    padding: 0 5% 80px 5%;
-    color:#2c5311;
-}
-
-.kontak h1{
-    padding-top: 80px;
-}
-.kontak p{
-    font-size: 20px;
-    padding-top: 10px;
-}
-
-button{
-    background-color: #2c5311;
-    color: #fff;
-    padding: 10px;
+@keyframes slide_up {
+    0% {
+        transform: translateY(100px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }
