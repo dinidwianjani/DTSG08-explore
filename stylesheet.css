@@ -11,6 +11,7 @@ body{
 
 .body1-wrapper {
     text-align: center;
+    height: 600px;
     background-color: #fff;
     padding: 0 5% 80px 5%;
     color: #2c5311;
@@ -46,4 +47,25 @@ body{
     margin-top: 15px;
     font-weight: bold;
     font-size: 25px
+}
+
+.kontak {
+    text-align: center;
+    background-color: #a2d39c;
+    padding: 0 5% 80px 5%;
+    color:#2c5311;
+}
+
+.kontak h1{
+    padding-top: 80px;
+}
+.kontak p{
+    font-size: 20px;
+    padding-top: 10px;
+}
+
+button{
+    background-color: #2c5311;
+    color: #fff;
+    padding: 10px;
 }
